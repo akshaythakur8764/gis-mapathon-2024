@@ -1,0 +1,791 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import Navigation from "../components/Navigation.astro";
+import Hero from "../components/Hero.astro";
+import Feature from "../components/Feature.astro";
+import Counter from "../components/Counter.astro";
+import ContentMedia from "../components/ContentMedia.astro";
+import { Image } from "astro:assets";
+import what_is from "../what_is.png";
+import register from "../register.png";
+import theme from "./src/Images/theme.png";
+import submission from "../images/submission.png";
+import evolution from "../images/evolution.png";
+import eligibility from "../images/eligibility.png";
+import resources from "../assets/img/resources.png";
+import poster from "../images/thumb.png";
+import focal from "../images/focal.png";
+import spoken from "../images/spoken.png";
+import IITB from "../assets/img/IIT Bombay - logo.png";
+import FOSSEE from "../assets/img/fossee-logo.png";
+
+// const { localBirdImage = '../images/register.png' } = Astro.props
+// /home/fossee/astro-first-hackathon/src/images/register.png
+
+// Smooth scrolling to section with an additional 100px offset
+---
+
+<!-- astro assets element <Image srcimport('../images/register.png')} alt="img"/> -->
+<DefaultLayout title="Home">
+  <Hero />
+
+  <div>
+    <section
+      id="about"
+      class="h-100 flex flex-col items-center justify-center bg-[#f7f8f9] dark:bg-[#161618]"
+    >
+      <div class="flex items-center justify-center">
+        <h2
+          class="mb-4 border-b-4 border-b-orange-950 text-center text-4xl font-bold"
+        >
+          About IIT Bombay FOSSEE Geospatial Mapathon 2024:
+        </h2>
+      </div>
+
+      <div class="container mx-auto flex-1 text-justify text-xl">
+        <p class="mb-4">
+          Mapathon is a map making competition for creating thematic maps, using
+          open source data and mapping software. It is a collaborative event
+          where participants come together to develop new tools/methods that
+          improve the accuracy and usefulness of maps for a community. The
+          FOSSEE team at IIT Bombay, along with its partners (earlier partners
+          were AICTE, ISRO) will invite all Indians - to produce maps using
+          various data (e.g. observation data, remote sensing data, crowdsourced
+          data, etc.). The primary objective is to understand the potential of
+          remote sensing data and make maps for Indian regions using free open
+          source mapping software (e.g.: QGIS). The participants will
+          collectively work in a crowd sourcing method for jointly producing
+          thematic maps of India.
+        </p>
+        <p class="mb-4">
+          The data collected from various platforms have tremendous potential in
+          mapping India&rsquo;s resources, agriculture, climate and disaster
+          management, rural and urban planning and in identifying pathways for
+          future development. Such maps can be created using Free open Source
+          platforms (such as QGIS). Let us join together to create such maps
+          through the Mapathon.
+        </p>
+        <p class="mb-4">
+          Mapathon also aims to develop indigenous capacity to customize and
+          employ mapping to resolve societal challenges and create new
+          opportunities for young India.-. The primary objective is to
+          understand the potential of open source mapping and maps for Indian
+          regions and to build capacity for the same.
+        </p>
+      </div>
+    </section>
+  </div>
+  <!---------Registration------- -->
+  <section id="register">
+    <div
+      class="grayscale-8  bg-slate-300 py-16 text-center leading-7 dark:bg-slate-950"
+    >
+      <div class="flex items-center justify-center">
+        <h2
+          class="mb-4 border-b-4 border-b-orange-950 text-center text-4xl font-bold"
+        >
+          Registration
+        </h2>
+      </div>
+      <p>
+        Please click on the following button to register yourself for the
+        Hackathon
+      </p>
+      <div class="text-center leading-7">
+        <a href="https://forms.gle/FoEMwUaQL8JMrGSN9" target="_blank">
+          <button
+            type="button"
+            class="mb-2 me-2 rounded-lg bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white shadow-lg shadow-blue-500/50 hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:shadow-lg dark:shadow-blue-800/80 dark:focus:ring-blue-800"
+            >Register</button
+          >
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+<!-------important dates----- -->
+<section
+  id="dates"
+  class="flex flex-col items-center justify-center bg-gray-400 py-16"
+>
+  <div class="flex items-center justify-center">
+    <h2
+      class="mb-4 border-b-4 border-b-orange-950 text-center text-4xl font-bold"
+    >
+      Important Dates
+    </h2>
+  </div>
+  <div class="container flex-1">
+    <table
+      class="my-8 table-fixed border-collapse border-2 border-red-500 bg-white py-8 text-xl dark:text-black"
+    >
+      <tbody>
+        <tr>
+          <td>Registration start date</td>
+
+          <td style="text-align: center;">April 15, 2024</td>
+        </tr>
+        <tr>
+          <td>Registration end date</td>
+
+          <td style="text-align: center;">May 31, 2024</td>
+        </tr>
+        <tr>
+          <td>Origination</td>
+
+          <td style="text-align: center;">April 30, 2024</td>
+        </tr>
+        <tr>
+          <td>Doubt clearing session 01</td>
+
+          <td style="text-align: center;">May 16, 2024</td>
+        </tr>
+        <tr>
+          <td>Doubt clearing session 02</td>
+
+          <td style="text-align: center;">May 25, 2024</td>
+        </tr>
+        <tr>
+          <td>Submission start date</td>
+
+          <td style="text-align: center;">April 30, 2024</td>
+        </tr>
+        <tr>
+          <td>Submission end date</td>
+
+          <td style="text-align: center;">May 31, 2024</td>
+        </tr>
+        <tr>
+          <td>Mapathon Evaluation</td>
+
+          <td style="text-align: center;">June 01 to June 10, 2024</td>
+        </tr>
+        <tr>
+          <td>01 minute (recording) presentation submission</td>
+
+          <td style="text-align: center;"
+            >June 13, 2024 (by Champions/ Winners)</td
+          >
+        </tr>
+        <tr>
+          <td>Declaration of Results (Tentative) x</td>
+
+          <td style="text-align: center;"
+            >June 13, 2024 (by Champions/ Winners)</td
+          >
+        </tr>
+        <tr>
+          <td>Submission of recorded testimonials by winners</td>
+
+          <td style="text-align: center;">June 20, 2024</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<!------------About------------- -->
+
+<section
+  id="about"
+  class="flex flex-col items-center justify-center bg-[#f7f8f9] py-8 dark:bg-[#161618]"
+>
+  <div class="flex items-center justify-center">
+    <h2
+      class="mb-4 border-b-4 border-b-orange-950 text-center text-4xl font-bold"
+    >
+      FOSSEE GIS Mandates
+    </h2>
+  </div>
+
+  <div class="box container mx-auto flex-1 text-justify text-lg">
+    <p class="mb-4">
+      The following are the mandates of the IIT Bombay FOSSEE GIS team. It is
+      requested that the applicant(s) before or during the time of registration
+      go through all the mandates laid out by the IIT Bombay FOSSEE GIS team,
+      and adhere to it. It any violation/ breach of any mandate is found at any
+      phase of the Mapathon, the concerned team(s) shall be disqualified without
+      any further notice. It is also to be noted that at all times, the decision
+      of the IIT Bombay FOSSEE GIS team shall be final and non-appealable.
+    </p>
+    <div class="mb-4 pl-8">
+      <ul class="list-disc">
+        <li><strong>Indian Citizen</strong> Only</li>
+        <li>
+          Must be a bonafide student/alumni of UGC/AICTE/AIU recognized
+          University/ College/ Research Organization in India
+        </li>
+        <li>Use only <strong>Free/Libre Open Source Software</strong></li>
+        <li>Use only <strong>Open Source Hardware</strong></li>
+        <li>
+          Align with any <strong>SDG. Work on real-life data sets.</strong>
+        </li>
+        <li>
+          Adhere to the <strong>Indian National Geospatial Policy</strong>
+        </li>
+        <li>
+          Use Indian Satellite data, and shape file only from the <strong
+            >Survey of India
+          </strong>portal
+        </li>
+        <li>
+          Inclined towards <strong>Gati Shakti</strong>
+          <em>(recommended)</em>.
+        </li>
+      </ul>
+    </div>
+    <p class="mb-4">
+      The decision of the IIT Bombay FOSSEE GIS team will be final in all
+      circumstances and non-appealable. By registering and participating in the
+      Mapathon, the participant(s)/ team(s) will be bound to the mandates and
+      shall be expected to abide by them.
+    </p>
+  </div>
+</section>
+
+<!--------------Partners----------- -->
+
+<section id="partner" class="container">
+  <div class="flex items-center justify-center">
+    <h2 class="mb-4 border-b-4 border-b-orange-950 text-center text-4xl font-bold">
+      MAIN ORGANIZER
+    </h2>
+  </div>
+
+  <!-- First Row -->
+  <div class="rounded-b-lg rounded-t-[18px] border-4 border-b-[23px] border-[#1f2937] p-4 text-white">
+    <!-- Your content for the first row goes here -->
+    <!-- <p>Partners </p> -->
+    <div class="grid grid-cols-3 place-items-center items-center justify-center gap-4">
+      <div class="text-red-300">
+        <a href="https://www.iitb.ac.in"
+          target="_blank"
+          class="flex-1 items-center justify-center overflow-hidden rounded-md border-indigo-600">
+          <img class="logos" src={IITB.src} alt="IITB" decoding="async" />
+        </a>
+      </div>
+      <div class="text-red-300">
+        <a href="https://fossee.in/"
+          target="_blank"
+          class="flex-1 items-center justify-center overflow-hidden rounded-md border-indigo-600">
+          <img class="logos"
+            src="https://iitb-fossee-mapathon.fossee.in/static/cms/uploads/images/fossee-logo.png"
+            alt="FOSSEE"
+            decoding="async" />
+        </a>
+      </div>
+      <div class="text-red-300">
+        <a href="https://www.manipal.edu/mu.html"
+          target="_blank"
+          class="flex-1 items-center justify-center overflow-hidden rounded-md border-indigo-600">
+          <img class="logos" alt="manipal Banglore Campus" decoding="async" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-------------------- -->
+<section id="theme" class="mt-4">
+  <div>
+    <div class="container overflow-x-auto">
+      <div class="flex items-center justify-center">
+        <h2
+          class="mb-4 border-b-4 border-b-orange-950 text-center text-4xl font-bold"
+        >
+          Themes
+        </h2>
+      </div>
+      <table class="glow-border table-auto font-bold text-slate-950">
+        <tbody>
+          <tr>
+            <td>Agriculture</td>
+            <td>Hydrology</td>
+          </tr>
+          <tr>
+            <td>Drones</td>
+            <td>Civil Engineering</td>
+          </tr>
+          <tr>
+            <td>Case Study with Policy impacts</td>
+            <td>Oceanography</td>
+          </tr>
+          <tr>
+            <td>Forestry</td>
+            <td>Gaming</td>
+          </tr>
+          <tr>
+            <td>Remote Sensing</td>
+            <td>Landscaping</td>
+          </tr>
+          <tr>
+            <td>Geology</td>
+            <td>Geostatistics</td>
+          </tr>
+          <tr>
+            <td>Groundwater</td>
+            <td>GIS in Medical Sciences</td>
+          </tr>
+          <tr>
+            <td>Transport</td>
+            <td>City Planning</td>
+          </tr>
+          <tr>
+            <td>Transport</td>
+            <td>Glacier</td>
+          </tr>
+          <tr>
+            <td>Internet based Case Study</td>
+            <td>Land Use Land Cover of Districts in India</td>
+          </tr>
+          <tr>
+            <td>Media GIS Case Study</td>
+            <td>Medicine</td>
+          </tr>
+          <tr>
+            <td>Environmental</td>
+            <td>Municipal GIS Case Study</td>
+          </tr>
+          <tr>
+            <td>Urban GIS Case Study</td>
+            <td>Mining GIS Case Study</td>
+          </tr>
+          <tr>
+            <td>Refineries in India</td>
+            <td>Automobile GIS Case Study</td>
+          </tr>
+          <tr>
+            <td>Nautical GIS Case Study</td>
+            <td>Ocean GIS Case Study</td>
+          </tr>
+          <tr>
+            <td>Oil & Gas GIS Case Study</td>
+            <td>Park GIS Case Study</td>
+          </tr>
+          <tr>
+            <td>Government GIS Case Study</td>
+            <td>Real Estate GIS Case Study</td>
+          </tr>
+          <tr>
+            <td>Societal GIS Case Study</td>
+            <td>Soil GIS Case Study</td>
+          </tr>
+          <tr>
+            <td>Sports GIS Case Study</td>
+            <td>Geodesy GIS Case Study</td>
+          </tr>
+          <tr>
+            <td>Telecommunication GIS Case Study</td>
+            <td>Tourism GIS Case Study</td>
+          </tr>
+          <tr>
+            <td>Transmission GIS Case Study</td>
+            <td>Spatial Billing Systems</td>
+          </tr>
+          <tr>
+            <td>Street view measure</td>
+            <td>Weather GIS Case Study</td>
+          </tr>
+          <tr>
+            <td>Smart city</td>
+            <td>Smart village</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="text-center"
+              >Any other theme can be proposed (subject to approval by IIT
+              Bombay-FOSSEE-GIS team)</td
+            >
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box container mt-5 font-bold bg-purple-300">
+      <div class="flex items-center justify-center ">
+        <h2
+          class="mb-4 border-b-4 border-b-orange-950 text-center text-4xl font-bold"
+        >
+          Problem Statements
+        </h2>
+      </div>
+      <ol class="container list-inside list-decimal leading-8">
+        <li class=" bg-white border-b-8 border-purple-300">Mapping of natural resources/man-made features</li>
+        <li class=" bg-white border-b-8 border-purple-300">Natural Resources Change Detection&nbsp;</li>
+        <li class=" bg-white border-b-8 border-purple-300">LULC Change with hotspots using LULC maps from Bhuvan</li>
+        <li class=" bg-white border-b-8 border-purple-300">Flood Maps</li>
+        <li class=" bg-white border-b-8 border-purple-300">State-wise Health Care Indicators Maps</li>
+        <li class=" bg-white border-b-8 border-purple-300" >
+          Locust infestation / Stubble burning / Low lying areas / Low lying
+          areas / Jhum Cultivation
+        </li>
+        <li class=" bg-white border-b-8 border-purple-300" >Road Network&nbsp; and Road Quality / Drainage Maps</li>
+        <li class=" bg-white border-b-8 border-purple-300">Land Degradation Maps</li>
+        <li class=" bg-white border-b-8 border-purple-300">Health infra, population, age group etc. for Vaccination</li>
+        <li class=" bg-white border-b-8 border-purple-300">Detection of change in Waterbodies / Reservoirs / Wetlands</li>
+        <li class=" bg-white border-b-8 border-purple-300">Crop / Plantation&nbsp; type map</li>
+        <li class=" bg-white border-b-8 border-purple-300">Amenities map&nbsp;</li>
+        <li class=" bg-white border-b-8 border-purple-300">Water source and quality mapping</li>
+        <li class=" bg-white border-b-8 border-purple-300">Population crowding/ traffic hotspots</li>
+        <li class=" bg-white border-b-8 border-purple-300">Network coverage maps</li>
+        <li class=" bg-white border-b-8 border-purple-300">Local markets/produce/employment maps&nbsp;</li>
+        <li class=" bg-white border-b-8 border-purple-300">Map of waste segregation and collection points</li>
+        <li class=" bg-white border-b-8 border-purple-300">Mapping places of cultural importance</li>
+        <li class=" bg-white border-b-8 border-purple-300">Choose your own topic</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<!------ Mapathon flow----- -->
+<section id="flow">
+
+
+  <div class="grayscale-8 box mt-8 flex flex-col items-center bg-sky-300 py-5 text-center" style="background-color: #e5fffa;">
+    <div class="flex items-center justify-center">
+      <h2
+        class="mb-4 border-b-4 border-b-orange-950 text-center text-4xl font-bold"
+      >
+    Mapathon Process Flow
+    </h2></div>
+    <!-- Registration -->
+    <div class="rounded-lg bg-gray-100 p-6 shadow-md">
+      <h2 class="text-xl font-semibold">Registration</h2>
+      <p class="mt-2">Mandatory</p>
+    </div>
+    <div class="flex items-center justify-center">
+      <div
+        class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-gray-300 text-gray-500"
+      >
+        ↓
+      </div>
+    </div>
+    <!-- Confirmation -->
+    <div class="rounded-lg bg-gray-100 p-6 shadow-md">
+      <h2 class="text-xl font-semibold">Confirmation</h2>
+      <p class="mt-2">
+        List of eligible participant/teams shall get link from the IIT Bombay
+        FOSSEE GIS team to upload submissions
+      </p>
+    </div>
+    <div class="flex items-center justify-center">
+      <div
+        class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-gray-300 text-gray-500"
+      >
+        ↓
+      </div>
+    </div>
+    <!-- Submission -->
+    <div class="rounded-lg bg-gray-100 p-6 shadow-md">
+      <h2 class="text-xl font-semibold">Submission</h2>
+    </div>
+    <div class="flex items-center justify-center">
+      <div
+        class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-gray-300 text-gray-500"
+      >
+        ↓
+      </div>
+    </div>
+    <!-- Evaluation -->
+    <div class="rounded-lg bg-gray-100 p-6 shadow-md">
+      <h2 class="text-xl font-semibold">Evaluation</h2>
+    </div>
+    <div class="flex items-center justify-center">
+      <div
+        class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-gray-300 text-gray-500"
+      >
+        ↓
+      </div>
+    </div>
+    <!-- Declaration of Results -->
+    <div class="rounded-lg bg-gray-100 p-6 shadow-md">
+      <h2 class="text-xl font-semibold">Declaration of Results</h2>
+    </div>
+    <div class="flex items-center justify-center">
+      <div
+        class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-gray-300 text-gray-500"
+      >
+        ↓
+      </div>
+    </div>
+    <!-- List of Candidates Eligible for Internship -->
+    <div class="rounded-lg bg-gray-100 p-6 shadow-md">
+      <h2 class="text-xl font-semibold">
+        List of Candidates Eligible for Internship
+      </h2>
+      <p class="mt-2">(Only for top 50 individuals)</p>
+    </div>
+  </div>
+</section>
+<!------------------ -->
+
+<section class="py-8 bg-blue-100">
+
+  <div class="grid grid-cols-2 gap-4 container my-3 py-3 border-4">
+   <div class="border"> 
+  <div class="flex items-center justify-center">
+    <h2
+      class="mb-4 border-b-4 border-b-orange-950 text-center text-4xl font-bold"
+    >
+    Sample Submission/Report
+    </h2>
+    
+  </div>
+  <div><p class="text-center text-xl">The sample report format will be sent to the registered teams only.</p></div>
+    
+</div>
+<div class="border">
+<div class="flex items-center justify-center">
+  <h2
+    class="mb-4 border-b-4 border-b-orange-950 text-center text-4xl font-bold"
+  >Prizes and Opportunity
+  </h2>
+  </div>
+  <div>
+  <p class="text-center text-lg">Internship/ Fellowship (candidates shortlisted earlier couldn&rsquo;t apply)</p>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="flex items-center justify-center mt-5 mb-5">
+  <h2
+    class="mb-4 border-b-4 border-b-orange-950 text-center text-4xl font-bold"
+  >Eligibility to Participate</h2></div>
+  <div class="text-justify">
+<ul class=" list-disc list-inside">
+<li>The IIT Bombay-FOSSEE-Mapathon is open &lsquo;ONLY FOR INDIAN NATIONALS&rsquo;.</li>
+<li>Students, Scholars, Faculty who have are currently pursuing their studies/ working in UGC/AICTE/ AIU/ Union or State Government approved Universities/ Colleges/ Institutions/ Organisations are eligible to apply. The participating team(s) can be a mix of any field of study in Science or Engineering with adequate knowledge on creating maps/ GIS, Remote Sensing, Environment, Geography, Geology, Policy, Statistics, Policy, Medicine, Management, Urban Planning, Rural Development or any related domain.</li>
+<li>Graduates holding a degree in any of the related domains (as mentioned above) are eligible to participate.</li>
+<li>Professionals working in the GIS industry are also eligible to participate.</li>
+<li>Indian students pursuing their education abroad are allowed to participate as well. In this case they shall be eligible only for the award of &lsquo;e-certificate&rsquo;.</li>
+</ul>
+</div>
+<div class="text-justify">
+<p><mark> Note: All the participants of the &ldquo;IIT Bombay-FOSSEE-Mapathon&rsquo; are expected to mandatorily adhere to the mandates of the IIT Bombay FOSSEE GIS team. The decision made by the IIT Bombay FOSSEE GIS team shall be final and non-appealable at all circumstances.</mark></p>
+
+<p>&nbsp;</p>
+<p><strong>Team size and composition</strong></p>
+<p>Participation to the fourth edition of the IIT Bombay FOSSEE Geospatial Mapathon 2024 can be done on&nbsp; (i), an individual basis (single member) or (ii) a team (minimum 02 to maximum 04 members + 01 mentors). Ideally, a team should have people with basic mapping expertise.</p>
+<p>The team can have a mentor (e.g. faculty, teacher, etc.), however, the exercise should be done by the team. Mentors can mentor multiple teams.</p>
+<p>Each participant/ mentor will be issued only one certificate.</p>
+<p>&nbsp;</p>
+
+<p><strong>Data and Helpful Resources&nbsp;</strong></p>
+<p>The maps can be created at National/State/District level boundaries using any 'open source' data. :</p>
+<p>For boundary data/materials, you may visit the Survey of India<a href="https://onlinemaps.surveyofindia.gov.in/Digital_Product_Show.aspx" target="_blank"> portal</a></p>
+<p><mark>Note: The user is liable for the correct use of Indian national boundaries, if represented in the maps.</mark></p>
+</div>
+</div>
+</section>
+
+
+
+<section id="team" class="bg-stone-300  py-8">
+  <div class="container">
+  <div class="flex items-center justify-center mt-5">
+    <h2
+      class="mb-4 border-b-4 border-b-orange-950 text-center text-4xl font-bold"
+    >
+  Mapathon Organizing team
+  </h2>
+  </div>
+  <div class="text-3xl text-center font-bold">Core Team</div>
+  <div class="text-2xl text-center">IIT Bombay</div>
+  <div class="flex justify-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Card 1 -->
+      <div class="rounded-lg bg-white p-4 shadow-md shadow-stone-700">
+        <h3 class="text-lg font-semibold">Prof. Kannan Moudgalya</h3>
+        <p class="text-sm">P.I. FOSSEE & Professor Emeritus</p>
+        <p class="text-sm">Indian Institute of Technology Bombay</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="rounded-lg bg-white p-4 shadow-md shadow-stone-700">
+        <h3 class="text-lg font-semibold">Prof. Pennan Chinnasamy</h3>
+        <p class="text-sm">Co.P.I. FOSSEE & Professor-in-Charge</p>
+        <p class="text-sm">The Rural Data Research and Analysis Lab</p>
+        <p class="text-sm">Indian Institute of Technology Bombay</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="rounded-lg bg-white p-4 shadow-md shadow-stone-700">
+        <h3 class="text-lg font-semibold">Mr. Mohamed Kasim Khan</h3>
+        <p class="text-sm">National Coordinator - FOSSEE(GIS)</p>
+        <p class="text-sm">Senior Project Research Scientist</p>
+        <p class="text-sm">
+          (National Mission on Education through ICT, <br />Ministry of
+          Education, Government of India)
+        </p>
+        <p class="text-sm">Indian Institute of Technology Bombay</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="text-2xl text-center">IIT Tirupati</div>
+  <div class="flex justify-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+
+      <div class="rounded-lg bg-white p-4 shadow-md shadow-stone-700">
+        <h3 class="text-lg font-semibold">Prof. Satyanarayana</h3>
+        <p class="text-sm">Director</p>
+        <p class="text-sm">Indian Institute of Technology Tirupati</p>
+    </div>
+
+    <!-- Prof. Roshan Srivastav -->
+    <div class="rounded-lg bg-white p-4 shadow-md shadow-stone-700">
+        <h3 class="text-lg font-semibold">Prof. Roshan Srivastav</h3>
+        <p class="text-sm">Project Director & Associate Professor</p>
+        <p class="text-sm">Indian Institute of Technology Tirupati Navavishkar I-Hub Foundation</p>
+        <p class="text-sm">(National Mission Interdisciplinary Cyber Physical System, DST, Government of India)</p>
+    </div>
+      </div>
+  </div>
+
+  <div class="text-2xl text-center">Survey of India</div>
+  <div class="flex justify-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+<!-- Dr. S.K. Sinha -->
+<div class="rounded-lg bg-white p-4 shadow-md shadow-stone-700">
+  <h3 class="text-lg font-semibold">Dr. S.K. Sinha</h3>
+  <p class="text-sm">Assistant Surveyor General</p>
+  <p class="text-sm">Survey of India, Dehradun</p>
+</div>
+
+<!-- Dr. Pankaj Mishra -->
+<div class="rounded-lg bg-white p-4 shadow-md shadow-stone-700">
+  <h3 class="text-lg font-semibold">Dr. Pankaj Mishra</h3>
+  <p class="text-sm">Deputy Surveyor General</p>
+  <p class="text-sm">National Institute of Geospatial Sciences and Technology, Survey of India, Hyderabad</p>
+</div>
+      </div>
+  </div>
+
+  <div class="text-2xl text-center">Delhi Technological University</div>
+  <div class="flex justify-center">
+    <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"> -->
+      <div class="rounded-lg bg-white p-4 shadow-md shadow-stone-700">
+        <h3 class="text-lg font-semibold">Col. Dr. K.C. Tiwari</h3>
+        <p class="text-sm">Head, Multidisciplinary Center for Geoinformatics</p>
+        <p class="text-sm">Delhi Technological University</p>
+    </div>
+      <!-- </div> -->
+  </div>
+
+
+  <div class="flex justify-center">
+    <div class="flex flex-row space-x-4">
+      
+      </div>
+  </div>
+  <div class="flex justify-center">
+    <div class="flex flex-row space-x-4">
+      
+      </div>
+  </div>
+  <div class="flex justify-center">
+    <div class="flex flex-row space-x-4">
+      
+      </div>
+  </div>
+
+
+
+</div>
+</section>
+
+<!-----------contact us------------ -->
+<section id="contact">
+  <div class="bg-gray-200 py-12">
+    <div class="flex items-center justify-center mt-5">
+      <h2
+        class="mb-4 border-b-4 border-b-orange-950 text-center text-4xl font-bold"
+      >Contact Us</h2>
+    </div>
+      <div class="flex flex-col space-y-4 text-center">
+        <div class="flex flex-col space-y-1">
+          <strong class="text-xl text-gray-900">Mohamed Kasim Khan</strong>
+          <p>National Coordinator - FOSSEE(GIS)</p>
+          <p>Senior Project Research Scientist</p>
+          <p>National Mission on Education through ICT</p>
+          <p>Ministry of Education, Government of India</p>
+          <p>Indian Institute of Technology Bombay</p>
+        </div>
+        
+        <div class="flex flex-col space-y-1">
+          <p><strong>Email:</strong> mohamedkasim@iitb.ac.in</p>
+          <p><strong>General Inquiries:</strong> gis@fossee.in</p>
+        </div>
+      </div>
+    </div>
+  
+  
+</section>
+
+<style>
+  tr td {
+    border: 4px solid #9ca3af;
+    width: 50%;
+  }
+  .glow-border {
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .glow-border::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(-45deg, #c8ff9b, #cda2ff, #94e2ff, #b0ffed);
+    filter: grayscale(50%);
+    background-size: 400% 400%;
+    z-index: -1;
+    border-radius: 0.5rem;
+    animation: gradient 10s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Change color of data when hovered */
+  .glow-border tbody tr td:hover {
+    background-color: #f1f1f1;
+  }
+
+  section {
+    scroll-margin-top: 100px;
+  }
+</style>
+<script>
+  let visible = false;
+  let observer;
+
+  $: observeElement = () => {
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(`entry`, entry, `is = ${entry.isIntersecting}`);
+        visible = entry.isIntersecting;
+      });
+    });
+
+    const domRef = document.querySelector("your-selector");
+    observer.observe(domRef);
+  };
+
+  $: observeElement();
+</script>
+</DefaultLayout>

@@ -1,0 +1,27 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+
+---
+<DefaultLayout title="test_result">
+    <div class="container">
+    <h1 class="text-red">Welcome to the Password Protected Page</h1>
+    <form id="passwordForm">
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password" required>
+        <button type="button" onclick="checkPassword()">Submit</button>
+    </form>
+    </div>
+    <script lang="js">
+        function checkPassword() {
+    var enteredPassword = document.getElementById("password").value;
+    var correctPassword = "12345678"; // Change this to your desired password
+
+    if (enteredPassword === correctPassword) {
+        window.location.href = "result.astro"; // Redirect to results.astro on correct password
+    } else {
+        alert("Incorrect password. Please try again.");
+    }
+}
+
+    </script>
+</DefaultLayout>

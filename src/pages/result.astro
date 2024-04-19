@@ -1,0 +1,107 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import NotFound from '../pages/404.astro';
+
+const activateResultPage = process.env.ACTIVATE_RESULT_PAGE === 'true';
+---
+{activateResultPage ? (
+<DefaultLayout title="Results">
+    <section id="results" class="container">
+        <div class="md:flex justify-center flex-md-equal w-full md:my-4 md:pl-4">
+          <div class=" md:mr-4 overflow-hidden pl-4 pr-4">
+            <div class="py-3">
+              <h4 class="display-5 section-title text-center">Results</h4>
+            </div>
+    
+    <p>List of Winners :</p>
+                <table class="w-full max-w-full border mb-4 bg-transparent table-striped block w-full overflow-auto scrolling-touch">
+               <thead class="thead-dark">
+                
+  <tr><th>Sl No.</th>
+  <th>Name</th>
+  <th>Title of submission</th>
+  <th>University Name</th>
+  <th>Rank</th>
+                    </tr></thead>
+  <tbody>
+  <tr>
+  <td>1</td>
+  <td>Pranay Kumar Pandey</td>
+  <td>1. Turbulent Flow Over Backward Facing Step 2. Detached Bow Shock Formation in a Supersonic Flow over a Wedge 3. Numerical Simulation of Non-Newtonian Fluid Flow across a Sinusoidal Microchannel 4. Mach Reflection: Flow over a Forward facing Step 5. Study of flow around a re-entry space capsule and a parachute using Openfoam 6. Different discretization schemes in OpenFOAM&nbsp;</td>
+  <td>Amity University Mumbai</td>
+  <td>1</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>Lalit Sunil Patil</td>
+  <td>1. Large Eddy Simulation of a confined planar jet opening in a rectangular channel 2. Large Eddy simulation confined circular jet opening in to a rectangular Channel 3. 2D turbulent buoyant flow 4. Natural convection study of air between heated walls </td>
+  <td>IIT Madras</td>
+  <td>2</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>Senthalmzhselvi S</td>
+  <td>1. External incompressible flow over hull of ship 2. Validation of laminar pipe flow</td>
+  <td>Puducherry Technological University&nbsp;</td>
+  <td>3</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>Muralidharan P T</td>
+  <td>1. Numerical simulation of laminar and turbulent flow through a circular pipe 2. Validation of laminar pipe flow</td>
+  <td>Puducherry Technological University&nbsp;</td>
+  <td>4</td>
+  </tr>
+  </tbody>
+  </table>
+    
+            
+                    </div>
+                  </div>
+
+                  <dialog>
+  <button autofocus>Close</button>
+  <p>This modal dialog has a groovy backdrop!</p>
+</dialog>
+<button>Show the dialog</button>
+                  </section>
+</DefaultLayout>
+):(
+<NotFound title="error">
+  
+
+ 
+  </NotFound>
+
+)}
+
+<style>
+  ::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    magenta,
+    rebeccapurple,
+    dodgerblue,
+    green
+  );
+  opacity: 0.75;
+}
+
+</style>
+
+<script lang="js">
+  const dialog = document.querySelector("dialog");
+const showButton = document.querySelector("dialog + button");
+const closeButton = document.querySelector("dialog button");
+
+// "Show the dialog" button opens the dialog modally
+showButton.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+// "Close" button closes the dialog
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
+
+</script>
